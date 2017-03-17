@@ -36,7 +36,14 @@ public class Main {
         }
        */
         
-       StudentManager.displayAllStudents();
+        Student student = new Student();
+        
+        student.setFirstName(InputHelper.getInput("Enter first name: "));
+        student.setLastName(InputHelper.getInput("Enter last name: "));
+        student.setDateOfBirth(InputHelper.getDateInput("Enter date of birth in yyyy-[m]m-[d]d format: "));
+        student.setOnBudget(InputHelper.getBooleanInput("Is student on budget true/false ? "));
+        
+        StudentManager.insertStudent(student);
       
       
         

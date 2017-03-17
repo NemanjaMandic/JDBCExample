@@ -3,8 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/nemus/Documents/NetBeansProjects/JDBCExamples/src/jdbcexamples/model/AdminManager.java</file>
+            <file>file:/C:/Users/nemus/Documents/NetBeansProjects/JDBCExamples/src/jdbcexamples/model/StatesManager.java</file>
+            <file>file:/C:/Users/nemus/Documents/NetBeansProjects/JDBCExamples/src/jdbcexamples/beans/Admin.java</file>
             <file>file:/C:/Users/nemus/Documents/NetBeansProjects/JDBCExamples/src/jdbcexamples/Main.java</file>
-            <file>file:/C:/Users/nemus/Documents/NetBeansProjects/JDBCExamples/src/jdbcexamples/DBConnection.java</file>
+            <file>file:/C:/Users/nemus/Documents/NetBeansProjects/JDBCExamples/src/jdbcexamples/InputHelper.java</file>
+            <file>file:/C:/Users/nemus/Documents/NetBeansProjects/JDBCExamples/src/jdbcexamples/beans/Student.java</file>
+            <file>file:/C:/Users/nemus/Documents/NetBeansProjects/JDBCExamples/src/jdbcexamples/model/ToursManager.java</file>
+            <file>file:/C:/Users/nemus/Documents/NetBeansProjects/JDBCExamples/src/jdbcexamples/DBConnectionUtil.java</file>
         </group>
     </open-files>
 </project-private>

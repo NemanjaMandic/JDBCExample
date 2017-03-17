@@ -7,6 +7,7 @@ package jdbcexamples;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.sql.Date;
 
 /**
  *
@@ -33,5 +34,15 @@ public class InputHelper {
     public static int getIntegerInput(String prompt){
         String input = getInput(prompt);
         return Integer.parseInt(input);
+    }
+    
+    public static Date getDateInput(String prompt){
+        String input = getInput(prompt);
+        return Date.valueOf(input);
+    }
+    
+    public static boolean getBooleanInput(String prompt){
+        String input = getInput(prompt);
+        return Boolean.parseBoolean(input);
     }
 }

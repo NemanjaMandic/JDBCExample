@@ -53,8 +53,7 @@ public class StudentManager {
         int candidateId = 0;
         
         String sql = "INSERT INTO student(firstName, lastName, dateOfBirth, onBudget) VALUES(?, ?, ?, ? );";
-        try(PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-                ){
+        try(PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);){
            
             ps.setString(1, stud.getFirstName());
             ps.setString(2, stud.getLastName());
@@ -62,10 +61,14 @@ public class StudentManager {
             ps.setBoolean(4, stud.isOnBudget());
             
             int rowAffected = ps.executeUpdate();
+           
             if(rowAffected == 1){
                 rs = ps.getGeneratedKeys();
-                if(rs.next())
-                    candidateId = rs.getInt(1);
+                rs.next();
+                candidateId = rs.getInt(1);
+                stud.setStudentId(candidateId);
+            }else{
+                System.err.println("No rows affected");
             }
             System.out.println("Inserted " + stud.getFirstName() + 
                     " " +stud.getLastName() + 
@@ -74,6 +77,13 @@ public class StudentManager {
             
         } catch (SQLException ex) {
             DBConnectionUtil.proccessException(ex);
+        }finally{
+            if(rs != null)
+                try {
+                    rs.close();
+            } catch (SQLException ex) {
+                DBConnectionUtil.proccessException(ex);
+            }
         }
     }
     
